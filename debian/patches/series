@@ -5,3 +5,4 @@
 dont-load-kernel-libipsec-plugin-by-default.patch
 lp1964977-fix-ipsec-pki-segfault.patch
 CVE-2022-40617.patch
+CVE-2023-41913.patch

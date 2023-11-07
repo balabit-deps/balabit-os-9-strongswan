@@ -1,3 +1,13 @@
+strongswan (5.9.5-2ubuntu2.2) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Buffer Overflow When Handling DH Public Values
+    - debian/patches/CVE-2023-41913.patch: Validate DH public key to fix
+      potential buffer overflow in
+      src/charon-tkm/src/tkm/tkm_diffie_hellman.c.
+    - CVE-2023-41913
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 07 Nov 2023 11:46:10 +0200
+
 strongswan (5.9.5-2ubuntu2.1) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Using Untrusted URIs for Revocation Checking
