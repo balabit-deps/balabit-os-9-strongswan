@@ -1,3 +1,14 @@
+strongswan (5.9.5-2ubuntu2.4) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Buffer Overflow When Handling EAP-MSCHAPv2 Failure
+    Requests
+    - debian/patches/CVE-2025-62291.patch: fix length check for Failure
+      Request packets on the client in
+      src/libcharon/plugins/eap_mschapv2/eap_mschapv2.c.
+    - CVE-2025-62291
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 21 Oct 2025 11:06:35 -0400
+
 strongswan (5.9.5-2ubuntu2.3) jammy-security; urgency=medium
 
   * SECURITY UPDATE: improper certificate validation
