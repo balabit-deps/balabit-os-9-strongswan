@@ -1,3 +1,13 @@
+strongswan (5.9.5-2ubuntu2.5) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Integer Underflow When Handling EAP-TTLS AVP
+    - debian/patches/CVE-2026-25075.patch: prevent crash if AVP length
+      header field is invalid in
+      src/libcharon/plugins/eap_ttls/eap_ttls_avp.c.
+    - CVE-2026-25075
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 11 Mar 2026 09:17:08 -0400
+
 strongswan (5.9.5-2ubuntu2.4) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Buffer Overflow When Handling EAP-MSCHAPv2 Failure
