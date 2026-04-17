@@ -1,3 +1,45 @@
+strongswan (5.9.5-2ubuntu2.6) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Infinite Loop When Handling Supported Versions TLS
+    Extension
+    - debian/patches/CVE-2026-35328.patch: prevent infinite loop if
+      supported versions are too short in src/libtls/tls_server.c.
+    - CVE-2026-35328
+  * SECURITY UPDATE: NULL-Pointer Dereference When Processing Padding in
+    PKCS#7
+    - debian/patches/CVE-2026-35329.patch: avoid NULL pointer dereference
+      when verifying padding in src/libstrongswan/crypto/pkcs5.c,
+      src/libstrongswan/plugins/pkcs7/pkcs7_enveloped_data.c.
+    - CVE-2026-35329
+  * SECURITY UPDATE: Integer Underflow When Handling EAP-SIM/AKA Attributes
+    - debian/patches/CVE-2026-35330.patch: reject zero-length EAP-SIM/AKA
+      attributes in src/libsimaka/simaka_message.c.
+    - CVE-2026-35330
+  * SECURITY UPDATE: Accepting Certificates Violating Name Constraints
+    - debian/patches/CVE-2026-35331.patch: case-insensitive matching and
+      reject excluded DN name constraints in
+      src/libstrongswan/plugins/constraints/constraints_validator.c,
+      src/libstrongswan/tests/suites/test_certnames.c.
+    - CVE-2026-35331
+  * SECURITY UPDATE: NULL-Pointer Dereference When Handling ECDH Public
+    Value in TLS
+    - debian/patches/CVE-2026-35332.patch: only accept non-empty ECDH
+      public keys with TLS < 1.3 in src/libtls/tls_server.c.
+    - CVE-2026-35332
+  * SECURITY UPDATE: Integer Underflow When Handling RADIUS Attributes
+    - debian/patches/CVE-2026-35333.patch: reject undersized attributes in
+      enumerator in src/libradius/radius_message.c.
+    - CVE-2026-35333
+  * SECURITY UPDATE: Possible NULL-Pointer Dereference in RSA Decryption
+    - debian/patches/CVE-2026-35334.patch: avoid crash and timing leaks in
+      PKCS#1 v1.5 decryption padding validation in
+      src/libstrongswan/plugins/gmp/gmp_rsa_private_key.c,
+      src/libstrongswan/utils/utils.h,
+      src/libstrongswan/utils/utils/constant_time.h.
+    - CVE-2026-35334
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 17 Apr 2026 16:02:46 -0400
+
 strongswan (5.9.5-2ubuntu2.5) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Integer Underflow When Handling EAP-TTLS AVP
