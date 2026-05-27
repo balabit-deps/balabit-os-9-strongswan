@@ -1,3 +1,13 @@
+strongswan (5.9.5-2ubuntu2.7) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Double-Free When Destroying Certain Cloned Identities
+    - debian/patches/CVE-2026-47895.patch: identification: Fix double-free when
+      cloning empty IDs in src/libstrongswan/tests/suites/test_identification.c,
+      src/libstrongswan/utils/identification.c.
+    - CVE-2026-47895
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 27 May 2026 11:22:00 -0400
+
 strongswan (5.9.5-2ubuntu2.6) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Infinite Loop When Handling Supported Versions TLS
